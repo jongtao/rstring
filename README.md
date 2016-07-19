@@ -15,6 +15,7 @@ the given total resistance.
 
 
 ## Features
+
 * Arbitrary number of tap voltages
 * Resistor options:
 	* E6, E12, E24, E48, E96, E192
@@ -24,6 +25,30 @@ the given total resistance.
 	* CSV output
 	* SPICE sub-circuit output
 * Error and current analysis
+
+
+## Compiling
+
+This program was written in [Rust](https://www.rust-lang.org) with the
+[Cargo](http://doc.crates.io/guide.html) environment.
+
+### With Cargo
+At the top level directory, run
+```
+cargo build --release
+```
+and the executable will be built as `target/release/rstring`
+
+### With rustc
+Alternatively, you can build it with just the compiler.
+
+In the `src` folder, run
+```
+rustc main.rs -o rstring
+```
+and the executable will be built as `rstring`
+
+
 
 ## Examples
 1. Usage
