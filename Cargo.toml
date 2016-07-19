@@ -1,0 +1,6 @@
+[package]
+name = "rstring"
+version = "0.1.0"
+authors = ["J. Tao <jon.g.tao@gmail.com>"]
+
+[dependencies]
