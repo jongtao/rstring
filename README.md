@@ -125,7 +125,7 @@ R7 TAP6 VNEG 6800
 
 4. CSV Output
 ```
-rstring -e12 -csv 10 54321 1 1.5 5.4 2.6 3.9 8.1 | column -t -s,
+$ rstring -e12 -csv 10 54321 1 1.5 5.4 2.6 3.9 8.1 | column -t -s,
 SourceVoltage    10
 Current          0.00018214936
                  
