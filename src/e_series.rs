@@ -141,12 +141,17 @@ fn find_magnitude(number: f32) -> f32
 pub fn find_closest(target: f32, raw_series: &Vec<f32>) -> Result<f32, ()>
 {
 	let mut series = vec![];
+
+	if target <= 0.0 {
+		return Ok(0.0);
+	}
+
 	let magnitude = find_magnitude(target);
 
 	if magnitude == f32::INFINITY {
 		return Err(());
 	}
-	else if magnitude == f32::NEG_INFINITY || magnitude == 0.0 {
+	else if magnitude == f32::NEG_INFINITY || magnitude <= 0.0 {
 		return Ok(0.0);
 	}
 
