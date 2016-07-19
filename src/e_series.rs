@@ -110,6 +110,9 @@ fn find_magnitude(number: f32) -> f32
 	if number.is_infinite() {
 		return number; // saturate result
 	}
+	else if number == 0.0 {
+		return 0.0;
+	}
 	else if number.is_nan() {
 		panic!{"Can't calculate magnitude of Nan!"}
 	}
@@ -123,13 +126,11 @@ fn find_magnitude(number: f32) -> f32
 			magnitude *= 10.0;
 		}
 	}
-	else {
-		if number < 1.0 {
-			while tmp < 1.0 {
-				tmp *= 10.0;
-				magnitude /= 10.0;
-			}
-		} // if < 1
+	else if number < 1.0 {
+		while tmp < 1.0 {
+			tmp *= 10.0;
+			magnitude /= 10.0;
+		}
 	}
 
 	magnitude
@@ -145,7 +146,7 @@ pub fn find_closest(target: f32, raw_series: &Vec<f32>) -> Result<f32, ()>
 	if magnitude == f32::INFINITY {
 		return Err(());
 	}
-	else if magnitude == f32::NEG_INFINITY {
+	else if magnitude == f32::NEG_INFINITY || magnitude == 0.0 {
 		return Ok(0.0);
 	}
 
