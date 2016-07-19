@@ -13,7 +13,7 @@ fn print_usage(args: &Vec<String>)
 	let path: Vec<&str> = args[0].split("/").collect();
 	let exe_name = &path[path.len()-1];
 
-	println!("Usage: {} [Opt. E Series] [Opt. Format] [Source voltage] [Total Resistance] \
+	println!("Usage: {} [Opt. E Series] [Opt. Format] [Source Voltage] [Total Resistance] \
 			[Tap Voltages...]", exe_name);
 
 	print!("\n");
@@ -21,7 +21,7 @@ fn print_usage(args: &Vec<String>)
 	println!("\t\t-e6, -e12, -e24, -e48, -e96, -e192, -ideal");
 
 	print!("\n");
-	println!("\tFormat options: (defaults to human readable if not given)");
+	println!("\tFormat options (defaults to human readable if not given):");
 	println!("\t\t-csv, -spice");
 
 	print!("\n\t");
