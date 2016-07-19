@@ -54,12 +54,12 @@ and the executable will be built as `rstring`
 1. Usage
 ```
 $ rstring
-Usage: rstring [Opt. E Series] [Opt. Format] [Source voltage] [Total Resistance] [Tap Voltages...]
+Usage: rstring [Opt. E Series] [Opt. Format] [Source Voltage] [Total Resistance] [Tap Voltages...]
 
 	E Series options (defaults to E12 series if not given): 
 		-e6, -e12, -e24, -e48, -e96, -e192, -ideal
 
-	Format options: (defaults to human readable if not given)
+	Format options (defaults to human readable if not given):
 		-csv, -spice
 
 	Description:
