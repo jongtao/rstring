@@ -42,7 +42,7 @@ and the executable will be built as `target/release/rstring`
 ### With rustc
 Alternatively, you can build it with just the compiler.
 
-In the `src` folder, run
+In the `src` directory, run
 ```
 rustc main.rs -o rstring
 ```
@@ -71,7 +71,7 @@ Usage: rstring [Opt. E Series] [Opt. Format] [Source voltage] [Total Resistance]
 		the given total resistance.
 ```
 
-2. Typical Use Case
+2. Typical Use
 ```
 $ rstring -e12 10 54321 1 1.5 5.4 2.6 3.9 8.1
 
@@ -104,7 +104,7 @@ Current Consumption:	0.000182 Amperes
 Total Resistance:	5.4900e4 Ohms (Ideal 5.4321e4 Ohms, Error: 1.07%)
 ```
 
-3. SPICE output
+3. SPICE Output
 ```
 $ rstring -e12 -spice 10 54321 1 1.5 5.4 2.6 3.9 8.1
 * Resistor Divider String
@@ -123,7 +123,7 @@ R7 TAP6 VNEG 6800
 ```
 
 
-4. CSV output
+4. CSV Output
 ```
 rstring -e12 -csv 10 54321 1 1.5 5.4 2.6 3.9 8.1 | column -t -s,
 SourceVoltage    10
